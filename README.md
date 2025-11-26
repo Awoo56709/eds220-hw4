@@ -1,6 +1,6 @@
 # Visualizing the Aftermath of the Easton and Palisades Fires
 
-[Palisades Weinraub Bus](vw.png)
+![Palisades Weinraub Bus](vw.png)
 
 # About
 
