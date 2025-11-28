@@ -1,31 +1,51 @@
-# Visualizing the Aftermath of the Easton and Palisades Fires
+# Visualizing the Aftermath of the Eaton and Palisades Fires
 
 ![Palisades Weinraub Bus](vw.png)
 
-# About
+## About
 
-This repository contains a Jupyter notebook that creates a false color imagery to visualize the aftermath of the Eaton and Palisades fires that occured in LA County. Using Landsat data and infrared data, we are able to see the severity and vegetation impacts in the corresponding fire zones.
+This repository contains a Jupyter notebook that demonstrates how to use false color imagery to visualize the aftermath of the Eaton and Palisades fires that occurred in LA County. Using Landsat 8 surface reflectance data and fire perimeter bands, the analysis highlights the severity and vegetation impacts of the fires.
 
-# Repository Structure
+## Key Outputs:
 
+- True color composite of the fire areas
+- False color composite including SWIR, NIR, and Red bands that showcase the aftermath of the fires
+- Map overlay of fire perimeters on false color rendered maps
+
+## Repository Structure
+
+```text
 C:.
 ├───data
-│   ├───eaton_fire
-│   └───palisades_fire
 └───eds220-hw4-task2-false-color-Ferrer-Lozano.ipynb
 └───README.md
-└───.gitignore
+```
+
+## Data Sources
+
+- Eaton and Palisades Fire Perimeter Data: Dissolved fire perimeter/boundary of the Eaton Fire that took place during January 2025. It was collected by the NIFC FIRIS program and is used to overlay fire boundaries on the Landsat 8 satellite imagery to visualize the fire's impact.
 
 
-# Data Sources
+- Landsat 8 Surface Reflectance Data: This dataset contains a collection of bands (red, green, blue, near-infrared and shortwave infrared) from the Landsat Collection 2 Level-2 atmospherically corrected surface reflectance data.
 
-- Eaton_Perimeter_20250121.shp: Dissolved fire perimeter/boundary of the Eaton Fire that took place during January 2025. It was collected by the NIFC FIRIS program.
+## Data Access
 
-- Palisades_Perimeter_20250121.shp: Dissolved fire perimeter/boundary of the Palisades Fire that took place during January 2025. It was collected by the NIFC FIRIS program.
+- Eaton and Palisades Fire Perimeter Shapefiles: These files are not included in this repository. To access these files, download them from ArcGIS Hub: [here](https://hub.arcgis.com/maps/ad51845ea5fb4eb483bc2a7c38b2370c). Both files must be downloaded separately.
 
-- landsat8-2025-02-23-palisades-eaton.nc: This dataset contains a collection of bands (red, green, blue, near-infrared and shortwave infrared) from the Landsat Collection 2 Level-2 atmospherically corrected surface reflectance data, collected by the Landsat 8 satellite.
+- Landsat 8 Data: The Landsat 8 data is not included in this repository. Due to the size of this data, it is located on a shared Google Drive folder for the UCSB EDS 220 course. 
 
-References:
+## Requirements
+
+This analysis requires the libraries below:
+
+- import os
+- import Numpy
+- import Rioxarray
+- import Matplotlib
+- import GeoPandas
+- import Xarray 
+
+## References:
 
 Palisades and Eaton Dissolved Fire Perimeters. (2025). Fire perimeter shapefiles [Geospatial dataset]. ArcGIS Hub. https://hub.arcgis.com/maps/ad51845ea5fb4eb483bc2a7c38b2370c  [Accessed Nov. 24, 2025]
 
